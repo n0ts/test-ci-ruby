@@ -11,4 +11,3 @@ script:
   - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
 before_install:
   - sudo gem install bundler -v '~> 1.16'
-
