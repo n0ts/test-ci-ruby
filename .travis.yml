@@ -1,0 +1,14 @@
+os:
+  - osx
+osx_image:
+  - xcoode9.2
+script:
+  - sudo rm -rf /usr/local/Homebrew
+  - travis_wait 60 sudo rvm implode --force
+  - openssl s_client -connect api.github.com:443
+  - openssl version
+  - ruby --version
+  - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
+before_install:
+  - sudo gem install bundler -v '~> 1.16'
+
