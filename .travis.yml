@@ -1,7 +1,5 @@
-os:
-  - osx
-osx_image:
-  - xcoode9.2
+os: osx
+osx_image: xcoode9.2
 script:
   - sudo rm -rf /usr/local/Homebrew
   - travis_wait 60 sudo rvm implode --force
