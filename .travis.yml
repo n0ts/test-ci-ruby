@@ -1,5 +1,6 @@
 os: osx
 osx_image: xcoode9.2
+language: ruby
 rvm:
   - 2.0.0-p247
 script:
