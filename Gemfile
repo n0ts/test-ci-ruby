@@ -6,4 +6,4 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-gem 'capistrano-sidekiq', :github => 'seuros/capistrano-sidekiq=>true'
+gem 'capistrano-sidekiq', :github => 'seuros/capistrano-sidekiq'
