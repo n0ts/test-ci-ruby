@@ -2,6 +2,7 @@ os: osx
 osx_image: xcoode9.2
 script:
   - brew list
+  - echo $PATH
   - sudo rm -rf /usr/local/Homebrew
   - travis_wait 60 sudo rvm implode --force
   - openssl s_client -connect api.github.com:443
