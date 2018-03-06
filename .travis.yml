@@ -1,17 +1,13 @@
 os: osx
 osx_image: xcoode9.2
-language: ruby
-rvm: default
 script:
+  - find $HOME/.rvm/usr -name openssl
   - openssl s_client -connect api.github.com:443
   - openssl version
   - ruby --version
   - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
 # for 10.12 only
 before_install:
-  - rvm list
-  - rvm list rubies
-  - rvm list default
-  - rvm install 2.0.0 --with-oenssl-dir=$HOME/.rvm/usr --verify-downloads 1
+  - rvm install 2.0.0 --with-oenssl-dir=$HOME/.rvm/usr
   - rvm use 2.0.0
   - gem install bundler -v '~> 1.10.5'
