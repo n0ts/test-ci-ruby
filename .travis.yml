@@ -5,6 +5,7 @@ script:
   - openssl version
   - ruby --version
   - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
+  - bundle install --path .bundle
 # for 10.12 only, because osx container is not installed ruby 2.0.0
 before_install:
   - rvm list rubies
