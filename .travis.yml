@@ -8,4 +8,7 @@ script:
   - ruby --version
   - ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
 before_install:
-  - sudo gem install bundler -v '~> 1.16'
+  - rvm pkg install openssl
+  - rvm install 2.0.0 --with-oenssl-dir=$HOME/.rvm/usr --verify-downloads 1
+  - rvm use 2.0.0
+  - gem install bundler -v '~> 1.10.5'
