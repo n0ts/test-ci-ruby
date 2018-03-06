@@ -1,7 +1,7 @@
 os: osx
 osx_image: xcoode9.2
 language: ruby
-rvm: system
+rvm: default
 script:
   - openssl s_client -connect api.github.com:443
   - openssl version
