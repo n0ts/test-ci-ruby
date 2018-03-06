@@ -8,6 +8,6 @@ script:
 # for 10.12 only, because osx container is not installed ruby 2.0.0
 before_install:
   - rvm list rubies
-  - rvm install 2.0.0 --with-oenssl-dir=$HOME/.rvm/usr
+  - rvm install 2.0.0
   - rvm use 2.0.0
   - gem install bundler -v '~> 1.10.5'
